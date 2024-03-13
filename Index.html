@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div>
+                <label for="item">Item</label>
+                <input id="item" name="item" type="text">
+            </div>
+        </div>
+        <button id="addItem">add item</button>
+        <div id="add"></div>
+
+    </div>
+</div>
+<script>
+
+    const add = document.getElementById('add');
+    const button = document.getElementById('addItem');
+    const item = document.getElementById('item')
+    //
+    //
+
+
+
+
+    button.addEventListener('click', addItem);
+    function addItem() {
+        //
+        //
+        let newElement = document.createElement('li');
+        newElement.innerText = item.value;
+        //
+
+        add.appendChild(newElement)
+        //
+    }
+    add.insertAdjacentElement('beforebegin', item);
+</script>
+</body>
+</html>
